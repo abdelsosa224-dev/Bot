@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Abdel Sosa 224 - Bot</title></head>
+<body>
+<p>Redirection en cours... <a id="lien" href="#">clique ici si rien ne se passe</a></p>
+<script>
+fetch('lien.txt?t=' + Date.now())
+  .then(r => r.text())
+  .then(url => {
+    url = url.trim();
+    document.getElementById('lien').href = url;
+    window.location.href = url;
+  });
+</script>
+</body></html>
